@@ -42,6 +42,7 @@ def moyenne_note():
     #indiquez lui que la note n'est pas correcte.
     #Vous devez mettre en place une gestion d'erreur afin d'éviter que l'utiliasteur saisi des str
 
+
 def major_minor():
 #demandez l'age à l'utilisateur, si il est en dessous de 0
     #levez une exception ValueError. Si son age est correcte, calculez sa moyenne
