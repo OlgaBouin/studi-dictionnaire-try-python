@@ -69,7 +69,12 @@ def moyenne_note():
     #Vous devez mettre en place une gestion d'erreur afin d'éviter que l'utiliasteur saisi des str
     entered_str = input("Please enter notes separated by spaces : ")
     notes_list = entered_str.split()
-    return notes_list
+
+    for i in range(len(notes_list)):
+        notes_list[i] = float(notes_list[i])
+        if (type(notes_list[i]) is not float) or (notes_list[i] < 0) or (notes_list[i] > 20):
+            return "One or several marks are not numerical between 0 and 20"
+    return "The average mark is : " + str(sum(notes_list) / len(notes_list))
 
 
 if __name__ == "__main__":
